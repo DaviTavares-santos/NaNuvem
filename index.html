@@ -1,17 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>NaNuvem | Sonhe, Compre e Viaje NaNuvem</title>
+
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-</body>
-</html>
+    <!-- ===================== -->
+    <!-- CABEÇALHO -->
+    <!-- ===================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <img src="img/logo.png" alt="NaNuvem">
+
+        </div>
+
+        <nav>
+
+            <a href="#">Promoções</a>
+
+            <a href="#">Destinos</a>
+
+            <a href="#">Ajuda</a>
+
+        </nav>
+
+    </header>
+
+    <!-- ===================== -->
+    <!-- HERO -->
+    <!-- ===================== -->
+
+    <section class="hero">
+
+        <div class="hero-texto">
+
+            <h1>Bora viajar?</h1>
+
+            <p>
+                Compare ofertas de diversas companhias
+                aéreas em um único lugar.
+            </p>
+
+        </div>
+
+        <!-- ===================== -->
+        <!-- PESQUISA -->
+        <!-- ===================== -->
+
+        <div class="pesquisa-box">
+
+            <!-- ORIGEM -->
+
+            <div class="campo">
+
+                <label>Origem</label>
+
+                <input
+                    type="text"
+                    id="origem"
+                    placeholder="Digite uma cidade ou aeroporto"
+                    autocomplete="off">
+
+                <div
+                    id="sugestoes-origem"
+                    class="sugestoes">
+                </div>
+
+            </div>
+
+            <!-- DESTINO -->
+
+            <div class="campo">
+
+                <label>Destino</label>
+
+                <input
+                    type="text"
+                    id="destino"
+                    placeholder="Digite uma cidade ou aeroporto"
+                    autocomplete="off">
+
+                <div
+                    id="sugestoes-destino"
+                    class="sugestoes">
+                </div>
+
+            </div>
+
+            <!-- DATA IDA -->
+
+            <div class="campo">
+
+                <label>Ida</label>
+
+                <input
+                    type="date"
+                    id="ida">
+
+            </div>
+
+            <!-- DATA VOLTA -->
+
+            <div class="campo">
+
+                <label>Volta</label>
+
+                <input
+                    type="date"
+                    id="volta">
+
+            </div>
