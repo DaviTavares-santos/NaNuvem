@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NaNuvem | Sonhe, Compre e Viaje</title>
+
+<title>NaNuvem Viagens</title>
 
 <link rel="stylesheet" href="css/style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,6 +20,8 @@
 <body>
 
 <header>
+
+<div class="container">
 
 <div class="logo">
 
@@ -32,59 +37,49 @@
 
 <a href="#">Ajuda</a>
 
+<a href="#">Entrar</a>
+
 </nav>
+
+</div>
 
 </header>
 
 <section class="hero">
 
-<div class="hero-text">
+<div class="container">
+
+<div class="hero-esquerda">
 
 <h1>
 
-Sonhe. Compre. Viaje NaNuvem.
+Com apenas um clique,<br>
+o sonho da sua viagem<br>
+vira realidade.
 
 </h1>
 
 <p>
 
-Compare passagens aéreas de diversas companhias em um único lugar.
+Compare passagens de centenas de companhias aéreas em um único lugar.
 
 </p>
 
 </div>
 
-<div class="pesquisa">
+<div class="hero-direita">
 
-<div class="topo">
-
-<select id="tipoViagem">
-
-<option>✈️ Ida e volta</option>
-
-<option>➡️ Somente ida</option>
-
-<option>🌍 Múltiplos destinos</option>
-
-</select>
-
-<select id="bagagem">
-
-<option>🧳 Bagagem</option>
-
-<option>Com bagagem</option>
-
-<option>Sem bagagem</option>
-
-</select>
+<img src="img/logo-grande.png" alt="NaNuvem">
 
 </div>
 
-<div class="barra">
+</div>
+
+<div class="barra-pesquisa">
 
 <div class="campo">
 
-<label>📍 Partida</label>
+<label>📍 Origem</label>
 
 <input
 type="text"
@@ -92,11 +87,11 @@ id="origem"
 placeholder="Cidade ou aeroporto"
 autocomplete="off">
 
-<div id="lista-origem" class="autocomplete"></div>
+<div id="lista-origem"></div>
 
 </div>
 
-<div class="troca">
+<div class="trocar">
 
 ✈️
 
@@ -104,7 +99,7 @@ autocomplete="off">
 
 <div class="campo">
 
-<label>📍 Chegada</label>
+<label>📍 Destino</label>
 
 <input
 type="text"
@@ -112,7 +107,7 @@ id="destino"
 placeholder="Cidade ou aeroporto"
 autocomplete="off">
 
-<div id="lista-destino" class="autocomplete"></div>
+<div id="lista-destino"></div>
 
 </div>
 
@@ -132,11 +127,11 @@ autocomplete="off">
 
 </div>
 
-<div class="campo">
+    <div class="campo passageiros">
 
 <label>👨‍👩‍👧 Passageiros</label>
 
-<button id="btnPassageiros">
+<button id="abrirPassageiros">
 
 1 Adulto • Econômica
 
@@ -152,11 +147,11 @@ autocomplete="off">
 
 <div>
 
-<button id="menosAdulto">-</button>
+<button type="button" id="menosAdulto">-</button>
 
 <span id="adultos">1</span>
 
-<button id="maisAdulto">+</button>
+<button type="button" id="maisAdulto">+</button>
 
 </div>
 
@@ -168,11 +163,11 @@ autocomplete="off">
 
 <div>
 
-<button id="menosCrianca">-</button>
+<button type="button" id="menosCrianca">-</button>
 
 <span id="criancas">0</span>
 
-<button id="maisCrianca">+</button>
+<button type="button" id="maisCrianca">+</button>
 
 </div>
 
@@ -184,17 +179,17 @@ autocomplete="off">
 
 <div>
 
-<button id="menosBebe">-</button>
+<button type="button" id="menosBebe">-</button>
 
 <span id="bebes">0</span>
 
-<button id="maisBebe">+</button>
+<button type="button" id="maisBebe">+</button>
 
 </div>
 
 </div>
 
-<label>💺 Classe</label>
+<label>💺 Classe da cabine</label>
 
 <select id="cabine">
 
@@ -208,13 +203,17 @@ autocomplete="off">
 
 </select>
 
+<div class="idade">
+
 <p>👶 Bebês: até 2 anos.</p>
 
-<p>🧒 Crianças: até 17 anos.</p>
+<p>🧒 Crianças: de 2 a 17 anos.</p>
 
 <p>👨 Adultos: 18 anos ou mais.</p>
 
-<button class="confirmar">
+</div>
+
+<button id="confirmarPassageiros">
 
 Confirmar
 
@@ -232,93 +231,142 @@ Confirmar
 
 </div>
 
+</section>
+
+<section class="vantagens">
+
+<div class="container">
+
+<div class="texto">
+
+<h2>
+
+A NaNuvem não fica com nenhum percentual do valor da sua passagem.
+
+</h2>
+
+<p>
+
+Pesquise centenas de companhias aéreas em segundos e encontre a melhor oferta para a sua viagem.
+
+</p>
+
+</div>
+
+<div class="imagem">
+
+<img src="img/cristo.png" alt="Cristo Redentor">
+
+</div>
+
 </div>
 
 </section>
 
-    <section class="vantagens">
+    <section class="destinos">
 
-    <div class="texto-vantagem">
+<div class="container">
 
-        <h2>
+<h2>🌎 Destinos Populares</h2>
 
-            A NaNuvem não fica com nenhum percentual do valor da passagem!
+<div class="cards">
 
-        </h2>
+<div class="card">
 
-        <p>
+<img src="img/rio.jpg" alt="Rio de Janeiro">
 
-            Nosso objetivo é conectar você às melhores ofertas das principais companhias aéreas, sem cobrar taxas escondidas.
+<h3>Rio de Janeiro</h3>
 
-        </p>
+<p>A partir de R$ 349</p>
 
-        <img src="img/cristo.png" alt="Cristo Redentor">
+</div>
 
-    </div>
+<div class="card">
+
+<img src="img/sao-paulo.jpg" alt="São Paulo">
+
+<h3>São Paulo</h3>
+
+<p>A partir de R$ 279</p>
+
+</div>
+
+<div class="card">
+
+<img src="img/salvador.jpg" alt="Salvador">
+
+<h3>Salvador</h3>
+
+<p>A partir de R$ 499</p>
+
+</div>
+
+<div class="card">
+
+<img src="img/fortaleza.jpg" alt="Fortaleza">
+
+<h3>Fortaleza</h3>
+
+<p>A partir de R$ 599</p>
+
+</div>
+
+<div class="card">
+
+<img src="img/recife.jpg" alt="Recife">
+
+<h3>Recife</h3>
+
+<p>A partir de R$ 529</p>
+
+</div>
+
+<div class="card">
+
+<img src="img/lisboa.jpg" alt="Lisboa">
+
+<h3>Lisboa</h3>
+
+<p>A partir de R$ 2.999</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="populares">
+<section class="sobre">
 
-    <h2>🌎 Destinos Populares</h2>
+<div class="container">
 
-    <div class="cards">
+<h2>✈️ Por que escolher a NaNuvem?</h2>
 
-        <div class="card">
+<p>
 
-            <img src="img/rio.jpg" alt="Rio de Janeiro">
+Encontre passagens nacionais e internacionais com rapidez,
+compare preços entre diversas companhias aéreas e viaje pagando menos.
 
-            <h3>Rio de Janeiro</h3>
+</p>
 
-        </div>
-
-        <div class="card">
-
-            <img src="img/salvador.jpg" alt="Salvador">
-
-            <h3>Salvador</h3>
-
-        </div>
-
-        <div class="card">
-
-            <img src="img/lisboa.jpg" alt="Lisboa">
-
-            <h3>Lisboa</h3>
-
-        </div>
-
-        <div class="card">
-
-            <img src="img/saopaulo.jpg" alt="São Paulo">
-
-            <h3>São Paulo</h3>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="logo-final">
-
-    <img src="img/logo-grande.png" alt="NaNuvem">
+</div>
 
 </section>
 
 <footer>
 
-    <div class="footer-logo">
+<div class="container">
 
-        <img src="img/logo.png" alt="NaNuvem">
+<img src="img/logo.png" alt="NaNuvem">
 
-    </div>
+<p>
 
-    <p>
+© 2025 NaNuvem Viagens • Todos os direitos reservados.
 
-        © 2025 NaNuvem Viagens • Sonhe. Compre. Viaje NaNuvem.
+</p>
 
-    </p>
+</div>
 
 </footer>
 
