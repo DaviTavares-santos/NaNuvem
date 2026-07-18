@@ -1,129 +1,331 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NaNuvem | Sonhe, Compre e Viaje</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
 
-    <title>NaNuvem | Sonhe, Compre e Viaje NaNuvem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <!-- ===================== -->
-    <!-- CABEÇALHO -->
-    <!-- ===================== -->
+<header>
 
-    <header class="cabecalho">
+<div class="logo">
 
-        <div class="logo">
+<img src="img/logo.png" alt="NaNuvem">
 
-            <img src="img/logo.png" alt="NaNuvem">
+</div>
+
+<nav>
+
+<a href="#">Promoções</a>
+
+<a href="#">Destinos</a>
+
+<a href="#">Ajuda</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+Sonhe. Compre. Viaje NaNuvem.
+
+</h1>
+
+<p>
+
+Compare passagens aéreas de diversas companhias em um único lugar.
+
+</p>
+
+</div>
+
+<div class="pesquisa">
+
+<div class="topo">
+
+<select id="tipoViagem">
+
+<option>✈️ Ida e volta</option>
+
+<option>➡️ Somente ida</option>
+
+<option>🌍 Múltiplos destinos</option>
+
+</select>
+
+<select id="bagagem">
+
+<option>🧳 Bagagem</option>
+
+<option>Com bagagem</option>
+
+<option>Sem bagagem</option>
+
+</select>
+
+</div>
+
+<div class="barra">
+
+<div class="campo">
+
+<label>📍 Partida</label>
+
+<input
+type="text"
+id="origem"
+placeholder="Cidade ou aeroporto"
+autocomplete="off">
+
+<div id="lista-origem" class="autocomplete"></div>
+
+</div>
+
+<div class="troca">
+
+✈️
+
+</div>
+
+<div class="campo">
+
+<label>📍 Chegada</label>
+
+<input
+type="text"
+id="destino"
+placeholder="Cidade ou aeroporto"
+autocomplete="off">
+
+<div id="lista-destino" class="autocomplete"></div>
+
+</div>
+
+<div class="campo">
+
+<label>📅 Ida</label>
+
+<input type="date" id="ida">
+
+</div>
+
+<div class="campo">
+
+<label>📅 Volta</label>
+
+<input type="date" id="volta">
+
+</div>
+
+<div class="campo">
+
+<label>👨‍👩‍👧 Passageiros</label>
+
+<button id="btnPassageiros">
+
+1 Adulto • Econômica
+
+</button>
+
+<div id="painelPassageiros">
+
+<h3>Passageiros</h3>
+
+<div class="contador">
+
+<span>👨 Adultos</span>
+
+<div>
+
+<button id="menosAdulto">-</button>
+
+<span id="adultos">1</span>
+
+<button id="maisAdulto">+</button>
+
+</div>
+
+</div>
+
+<div class="contador">
+
+<span>🧒 Crianças</span>
+
+<div>
+
+<button id="menosCrianca">-</button>
+
+<span id="criancas">0</span>
+
+<button id="maisCrianca">+</button>
+
+</div>
+
+</div>
+
+<div class="contador">
+
+<span>👶 Bebês</span>
+
+<div>
+
+<button id="menosBebe">-</button>
+
+<span id="bebes">0</span>
+
+<button id="maisBebe">+</button>
+
+</div>
+
+</div>
+
+<label>💺 Classe</label>
+
+<select id="cabine">
+
+<option>Econômica</option>
+
+<option>Premium Econômica</option>
+
+<option>Executiva</option>
+
+<option>Primeira Classe</option>
+
+</select>
+
+<p>👶 Bebês: até 2 anos.</p>
+
+<p>🧒 Crianças: até 17 anos.</p>
+
+<p>👨 Adultos: 18 anos ou mais.</p>
+
+<button class="confirmar">
+
+Confirmar
+
+</button>
+
+</div>
+
+</div>
+
+<button class="buscar">
+
+🔍 Buscar
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+    <section class="vantagens">
+
+    <div class="texto-vantagem">
+
+        <h2>
+
+            A NaNuvem não fica com nenhum percentual do valor da passagem!
+
+        </h2>
+
+        <p>
+
+            Nosso objetivo é conectar você às melhores ofertas das principais companhias aéreas, sem cobrar taxas escondidas.
+
+        </p>
+
+        <img src="img/cristo.png" alt="Cristo Redentor">
+
+    </div>
+
+</section>
+
+<section class="populares">
+
+    <h2>🌎 Destinos Populares</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="img/rio.jpg" alt="Rio de Janeiro">
+
+            <h3>Rio de Janeiro</h3>
 
         </div>
 
-        <nav>
+        <div class="card">
 
-            <a href="#">Promoções</a>
+            <img src="img/salvador.jpg" alt="Salvador">
 
-            <a href="#">Destinos</a>
-
-            <a href="#">Ajuda</a>
-
-        </nav>
-
-    </header>
-
-    <!-- ===================== -->
-    <!-- HERO -->
-    <!-- ===================== -->
-
-    <section class="hero">
-
-        <div class="hero-texto">
-
-            <h1>Bora viajar?</h1>
-
-            <p>
-                Compare ofertas de diversas companhias
-                aéreas em um único lugar.
-            </p>
+            <h3>Salvador</h3>
 
         </div>
 
-        <!-- ===================== -->
-        <!-- PESQUISA -->
-        <!-- ===================== -->
+        <div class="card">
 
-        <div class="pesquisa-box">
+            <img src="img/lisboa.jpg" alt="Lisboa">
 
-            <!-- ORIGEM -->
+            <h3>Lisboa</h3>
 
-            <div class="campo">
+        </div>
 
-                <label>Origem</label>
+        <div class="card">
 
-                <input
-                    type="text"
-                    id="origem"
-                    placeholder="Digite uma cidade ou aeroporto"
-                    autocomplete="off">
+            <img src="img/saopaulo.jpg" alt="São Paulo">
 
-                <div
-                    id="sugestoes-origem"
-                    class="sugestoes">
-                </div>
+            <h3>São Paulo</h3>
 
-            </div>
+        </div>
 
-            <!-- DESTINO -->
+    </div>
 
-            <div class="campo">
+</section>
 
-                <label>Destino</label>
+<section class="logo-final">
 
-                <input
-                    type="text"
-                    id="destino"
-                    placeholder="Digite uma cidade ou aeroporto"
-                    autocomplete="off">
+    <img src="img/logo-grande.png" alt="NaNuvem">
 
-                <div
-                    id="sugestoes-destino"
-                    class="sugestoes">
-                </div>
+</section>
 
-            </div>
+<footer>
 
-            <!-- DATA IDA -->
+    <div class="footer-logo">
 
-            <div class="campo">
+        <img src="img/logo.png" alt="NaNuvem">
 
-                <label>Ida</label>
+    </div>
 
-                <input
-                    type="date"
-                    id="ida">
+    <p>
 
-            </div>
+        © 2025 NaNuvem Viagens • Sonhe. Compre. Viaje NaNuvem.
 
-            <!-- DATA VOLTA -->
+    </p>
 
-            <div class="campo">
+</footer>
 
-                <label>Volta</label>
+<script src="data/aeroportos.js"></script>
 
-                <input
-                    type="date"
-                    id="volta">
+<script src="js/script.js"></script>
 
-            </div>
+</body>
+
+</html>
